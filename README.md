@@ -27,10 +27,6 @@ require("AtomicGame");
 Atomic.game.init(start);
 
 function start() {
-  var game = Atomic.game;
-
-  game.createScene2D();
-
   Atomic.getUI().showConsole(true);
     
   Atomic.getEngine().subscribeToEvent('ConsoleCommand', function(data) {
@@ -56,10 +52,6 @@ require("AtomicGame");
 Atomic.game.init(start);
 
 function start() {
-	var game = Atomic.game;
-
-	game.createScene2D();
-
     var view = new Atomic.UIView();
     var layout = new Atomic.UILayout();
     layout.rect = view.rect;
