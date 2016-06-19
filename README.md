@@ -6,7 +6,6 @@
 ### How do you make the console appear?
 
 Example:
-
 ```
 require("AtomicGame");
 
@@ -22,7 +21,6 @@ function start() {
 You need to subscribe to the "ConsoleCommand" event. The callback will be passed in the entire command line and you can then react to it from script.
 
 Example:
-
 ```
 require("AtomicGame");
 
@@ -51,8 +49,7 @@ function start() {
 
 ### How do I add a button?
 
-Example
-
+Example:
 ```
 require("AtomicGame");
 
