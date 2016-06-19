@@ -10,13 +10,10 @@ Example:
 ```
 require("AtomicGame");
 
-Atomic.game.init(start, update);
+Atomic.game.init(start);
 
 function start() {
     Atomic.getUI().showConsole(true);
-}
-
-function update(timeStep) {
 }
 ```
 
@@ -29,7 +26,7 @@ Example:
 ```
 require("AtomicGame");
 
-Atomic.game.init(start, update);
+Atomic.game.init(start);
 
 function start() {
   var game = Atomic.game;
@@ -50,7 +47,36 @@ function start() {
     }
   });
 }
+```
 
-function update(timeStep) {
+### How do I add a button?
+
+Example
+
+```
+require("AtomicGame");
+
+Atomic.game.init(start);
+
+function start() {
+	var game = Atomic.game;
+
+	game.createScene2D();
+
+    var view = new Atomic.UIView();
+    var layout = new Atomic.UILayout();
+    layout.rect = view.rect;
+    view.addChild(layout);
+
+    var buttonLayout = new Atomic.UILayout();
+    buttonLayout.axis = Atomic.UI_AXIS_X;
+    layout.addChild(buttonLayout);
+    
+    var testButton = new Atomic.UIButton();
+    testButton.text = 'Click me!';
+    buttonLayout.addChild(testButton);
+    testButton.onClick = function () {
+        print('Button clicked!');
+    };
 }
 ```
