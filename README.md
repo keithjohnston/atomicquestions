@@ -1,6 +1,6 @@
 ## Atomic Game Engine Questions and Answers
 
-### How do I change the size of the app window in Javascript?
+### How do I change the size of the app window?
 
 
 ### How do you make the console appear?
