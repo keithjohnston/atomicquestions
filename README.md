@@ -1,10 +1,9 @@
-# atomicquestions
-Atomic Questions and Answers
+* Atomic Questions and Answers
 
-1. How do I change the size of the app window in Javascript?
+### How do I change the size of the app window in Javascript?
 
 
-2. How do you make the console appear
+### How do you make the console appear?
 
 Example:
 
@@ -21,7 +20,7 @@ function update(timeStep) {
 }
 ```
 
-3. How can I create my own console command from script?
+### How can I create my own console command from script?
 
 You need to subscribe to the "ConsoleCommand" event. The callback will be passed in the entire command line and you can then react to it from script.
 
@@ -33,9 +32,9 @@ require("AtomicGame");
 Atomic.game.init(start, update);
 
 function start() {
-	var game = Atomic.game;
+  var game = Atomic.game;
 
-	game.createScene2D();
+  game.createScene2D();
 
   Atomic.getUI().showConsole(true);
     
