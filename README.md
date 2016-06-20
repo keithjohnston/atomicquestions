@@ -69,3 +69,60 @@ function start() {
     };
 }
 ```
+
+### How can I skin a button with custom graphics?
+
+Create a skin file that refers to the custom graphics:
+
+```
+elements
+	SpecialButton
+		bitmap button_normal.png
+		min-width 131
+		min-height 40
+		overrides
+			element SpecialButton.pressed
+				state pressed
+			element SpecialButton.hovered
+				state hovered
+	SpecialButton.pressed
+		bitmap button_click.png
+		min-width 131
+		min-height 40
+	SpecialButton.hovered
+		bitmap button_hover.png
+		min-width 131
+		min-height 40
+```
+
+Load the skin and set the skinBg for the UIButton.
+
+```
+require("AtomicGame");
+
+Atomic.game.init(start);
+
+function start() {
+
+    Atomic.ui.loadSkin("UI/skin.ui");
+
+    var view = new Atomic.UIView();
+    var layout = new Atomic.UILayout();
+    layout.rect = view.rect;
+    view.addChild(layout);
+
+    var buttonLayout = new Atomic.UILayout();
+    buttonLayout.axis = Atomic.UI_AXIS_X;
+    layout.addChild(buttonLayout);
+
+    var testButton = new Atomic.UIButton();
+    testButton.skinBg = "SpecialButton";
+    
+    buttonLayout.addChild(testButton);
+    testButton.onClick = function () {
+        print('Button clicked!');
+    };
+}
+```
+
+
