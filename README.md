@@ -72,7 +72,9 @@ function start() {
 
 ### How can I skin a button with custom graphics?
 
-Create a skin file that refers to the custom graphics:
+Create a skin file that refers to the custom graphics. Put the png file into the same directory.
+
+UI/skin.ui
 
 ```
 elements
