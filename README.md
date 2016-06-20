@@ -127,7 +127,7 @@ function start() {
 }
 ```
 
-How do you display a sprite in 2D?
+### How do you display a sprite in 2D?
 
 Make sure that a file 'star.png' is in the directory 'Sprites'.
 
