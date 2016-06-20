@@ -16,7 +16,7 @@ function start() {
 }
 ```
 
-### How can I create my own console command from script?
+### How can you create my own console command from script?
 
 You need to subscribe to the "ConsoleCommand" event. The callback will be passed in the entire command line and you can then react to it from script.
 
@@ -43,7 +43,7 @@ function start() {
 }
 ```
 
-### How do I add a button?
+### How do you add a button?
 
 Example:
 ```
@@ -124,6 +124,25 @@ function start() {
     testButton.onClick = function () {
         print('Button clicked!');
     };
+}
+```
+
+How do you display a sprite in 2D?
+
+Make sure that a file 'star.png' is in the directory 'Sprites'.
+
+```
+require("AtomicGame");
+
+Atomic.game.init(start);
+
+function start() {
+    var game = Atomic.game;
+    game.createScene2D();
+    var node = game.scene.createChild("star");
+    var starSprite = game.cache.getResource("Sprite2D", "Sprites/star.png");
+    var sprite2D = node.createComponent("StaticSprite2D");
+    sprite2D.sprite = starSprite;
 }
 ```
 
